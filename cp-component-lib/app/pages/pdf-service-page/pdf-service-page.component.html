@@ -1,0 +1,32 @@
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h1>{{'pdfServicePage.title' | translate}}</h1>
+    <p>{{'pdfServicePage.description' | translate}}</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{'common.designDocSection' | translate}}</h3>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{'common.apiExampleSection' | translate}}</h3>
+    <pre ngNonBindable>
+      <code class="language-typescript">
+        this.PdfExportService.generatePdf(records: WorklistAsset[], columnDefs: CplDataTableColumnDefs[], title: string);
+      </code>
+    </pre>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{'common.exampleUseSection' | translate}}</h3>
+    <p>{{'pdfServicePage.testDescription' | translate}}</p>
+    <button (click)="exportToPdf()">{{'pdfServicePage.exportPdf' | translate}}</button>
+  </div>
+</div>

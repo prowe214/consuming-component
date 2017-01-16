@@ -1,0 +1,50 @@
+{
+  "appTitle": "Crownpeak Component Library",
+  "common": {
+    "notAvailable": "Not Available",
+    "crownpeak": "Crownpeak",
+    "copyright": "Copyright © {{value}}",
+    "allrights": "All Rights Reserved",
+    "commadelim": ",",
+    "designDocSection": "Design Document Section",
+    "apiExampleSection": "API/Code/Style Example Section",
+    "exampleUseSection": "Example Use Section"
+  },
+  "navMenu": {
+    "simpleComponents": "Simple Components",
+    "complexComponents": "Complex Components",
+    "attrDirectives": "Attribute Directives",
+    "structuralDirectives": "Structural Directives",
+    "pipes": "Pipes",
+    "services": "Services"
+  },
+  "setupPage": {
+    "title": "Setup",
+    "description": "This will be the page where it lets designers, developers and product know how to import the project, the change log and all the goodies associated with bringing the component library into a project."
+  },
+  "highlightDirectivePage": {
+    "title": "Highlight Directive"
+  },
+  "dataTableComponentPage": {
+    "title": "DataTable Component",
+    "description": "This is a data grid component that will do lots of awesome things.",
+    "exportPdf": "Export To Pdf",
+    "exportCsv": "Export To Csv"
+  },
+  "fileSizePipePage": {
+    "title": "File Size Pipe"
+  },
+  "csvServicePage": {
+    "title": "CSV Service",
+    "description": "This service takes a collection and exports it to CSV",
+    "testDescription": "Test the CSV export, which will download a CSV file with randomly generated data.",
+    "exportCsv": "Export Example Data To CSV"
+  },
+  "pdfServicePage": {
+    "title": "PDF Service",
+    "description": "This service takes a collection and exports it to PDF",
+    "testDescription": "Test the PDF export, which will open a PDF file with randomly generated data.",
+    "exportPdf": "Export Example Data To PDF"
+  }
+}
+

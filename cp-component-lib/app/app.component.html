@@ -1,0 +1,23 @@
+<div class="PC">
+    <!-- sidebar bar start-->
+    <cpl-sidebar (menuToggleEvent)="toggleMenu($event)"></cpl-sidebar>
+    <!-- sidebar bar end-->
+
+    <div class="content">
+        <div class="content-indent">
+            <!-- header bar start-->
+            <cpl-header (menuToggleEvent)="toggleMenu($event)"></cpl-header>
+            <!-- header bar end-->
+
+            <div class="content-outlet">
+                <router-outlet></router-outlet>
+            </div>
+
+            <!-- footer start-->
+            <cpl-footer></cpl-footer>
+            <!-- footer end-->
+
+        </div>
+    </div>
+
+</div>

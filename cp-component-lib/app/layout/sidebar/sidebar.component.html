@@ -1,0 +1,78 @@
+<div class="menu-side" [ngClass]="{'active':mobileMenuActive}">
+    <div class="menu-side-indent">
+        <span class="logo-container">
+            <a href="#" [routerLink]="['/']">
+                <img alt="logo" src="assets/images/logo.svg" />
+            </a>
+            <a id="openMobileMenuBtn" (click)="toggleMenuEvent($event)" [ngClass]="{'active':mobileMenuActive}">
+                <img alt="logo" src="assets/images/menu-icon.svg"/>
+            </a>
+        </span>
+
+        <span class="MenuSideMainLink bordersOfMenuSide"
+              [routerLink]="['/setup']">
+            <span class="MainLinkText">{{'setupPage.title' | translate}}</span>
+        </span>
+
+        <span id="simple_components"
+              #simple_components
+              class="MenuSideMainLink bordersOfMenuSide"
+              [class.MenuSideMainLinkDark]="simple_components.id == activeMenuId"
+              (click)="activeMenuId = simple_components.id">
+            <span class="MainLinkText">{{'navMenu.simpleComponents' | translate}}</span>
+        </span>
+        <div class="SubMenuLinkContainer" [ngClass]="{submenushow: (simple_components.id == activeMenuId), 'submenuhide': (simple_components.id != activeMenuId)}">
+            <a class="SubMenuLink" (click)="mobileMenuActive = false">&#9679; {{'common.notAvailable' | translate}}</a>
+        </div>
+        <span id="complex_components"
+              #complex_components
+              class="MenuSideMainLink bordersOfMenuSide"
+              [class.MenuSideMainLinkDark]="complex_components.id == activeMenuId"
+              (click)="activeMenuId = complex_components.id">
+            <span class="MainLinkText">{{'navMenu.complexComponents' | translate}}</span>
+        </span>
+        <div class="SubMenuLinkContainer" [ngClass]="{submenushow: (complex_components.id == activeMenuId), 'submenuhide': (complex_components.id != activeMenuId)}">
+            <a class="SubMenuLink" [routerLink]="['/datatable']" (click)="mobileMenuActive = false">&#9679; {{'dataTableComponentPage.title' | translate}}</a>
+        </div>
+        <span id="attr_directives"
+              #attr_directives class="MenuSideMainLink bordersOfMenuSide"
+              [class.MenuSideMainLinkDark]="attr_directives.id == activeMenuId"
+              (click)="activeMenuId = attr_directives.id">
+            <span class="MainLinkText">{{'navMenu.attrDirectives' | translate}}</span>
+        </span>
+        <div class="SubMenuLinkContainer" [ngClass]="{submenushow: (attr_directives.id == activeMenuId), 'submenuhide': (attr_directives.id != activeMenuId)}">
+            <a class="SubMenuLink" [routerLink]="['/highlightDirective']" (click)="mobileMenuActive = false">&#9679; {{'highlightDirectivePage.title' | translate}}</a>
+        </div>
+        <span id="structural_directives"
+              #structural_directives class="MenuSideMainLink bordersOfMenuSide"
+              [class.MenuSideMainLinkDark]="structural_directives.id == activeMenuId"
+              (click)="activeMenuId = structural_directives.id">
+            <span class="MainLinkText">{{'navMenu.structuralDirectives' | translate}}</span>
+        </span>
+        <div class="SubMenuLinkContainer" [ngClass]="{submenushow: (structural_directives.id == activeMenuId), 'submenuhide': (structural_directives.id != activeMenuId)}">
+            <a class="SubMenuLink" (click)="mobileMenuActive = false">&#9679; {{'common.notAvailable' | translate}}</a>
+        </div>
+
+        <span id="pipes"
+              #pipes class="MenuSideMainLink bordersOfMenuSide"
+              [class.MenuSideMainLinkDark]="pipes.id == activeMenuId"
+              (click)="activeMenuId = pipes.id">
+            <span class="MainLinkText">{{'navMenu.pipes' | translate}}</span>
+        </span>
+        <div class="SubMenuLinkContainer" [ngClass]="{submenushow: (pipes.id == activeMenuId), 'submenuhide': (pipes.id != activeMenuId)}">
+            <a class="SubMenuLink" [routerLink]="['/filesizepipe']" (click)="mobileMenuActive = false">&#9679; {{'fileSizePipePage.title' | translate}}</a>
+        </div>
+
+        <span id="services"
+              #services class="MenuSideMainLink bordersOfMenuSide"
+              [class.MenuSideMainLinkDark]="services.id == activeMenuId"
+              (click)="activeMenuId = services.id">
+            <span class="MainLinkText">{{'navMenu.services' | translate}}</span>
+        </span>
+        <div class="SubMenuLinkContainer" [ngClass]="{submenushow: (services.id == activeMenuId), 'submenuhide': (services.id != activeMenuId)}">
+            <a class="SubMenuLink" [routerLink]="['/csvservice']" (click)="mobileMenuActive = false">&#9679; {{'csvServicePage.title' | translate}}</a>
+            <a class="SubMenuLink" [routerLink]="['/pdfservice']" (click)="mobileMenuActive = false">&#9679; {{'pdfServicePage.title' | translate}}</a>
+        </div>
+
+    </div>
+</div>

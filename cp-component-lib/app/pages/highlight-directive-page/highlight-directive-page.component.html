@@ -1,0 +1,77 @@
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h1>Highlight Directive</h1>
+    <p>This is a simple sample directive whose goal is to allow the developer to style the background color of a component.</p>
+  </div>
+</div>
+
+<div class="example">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      {{ 'common.exampleUseSection' | translate }}
+      <h2 id="example1" cplHighlight="lightgreen">{{'nav.highlightDirective' | translate}}</h2>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active" [ngClass]="{active: isActive === 'html'}" (click)="isActive = 'html'" ><a data-target="#html" class="active">HTML</a></li>
+    </ul>
+
+    <pre id="example1" [ngClass]="{hidden: isActive !== 'html'}" class="html">
+      <code [innerHTML]="htmlContent" highlight-js-content=".highlight" class="html">
+      </code>
+    </pre>
+  </div>
+</div>
+
+<div class="example">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      {{ 'common.exampleUseSection' | translate }}
+      <h2 id="example2" [cplHighlight]="highlight" [defaultColor]="'gold'">Highlight me!</h2>
+      <div>
+        <input type="radio" name="highlights" (click)="highlight='lightgreen'">Green
+        <input type="radio" name="highlights" (click)="highlight='yellow'">Yellow
+        <input type="radio" name="highlights" (click)="highlight='cyan'">Cyan
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active" [ngClass]="{active: isActive === 'html'}" (click)="isActive = 'html'" ><a data-target="#html" class="active">HTML</a></li>
+    </ul>
+
+    <pre id="example2" [ngClass]="{hidden: isActive !== 'html'}" class="html">
+      <code [innerHTML]="htmlContent2" highlight-js-content=".highlight" class="html">
+      </code>
+    </pre>
+  </div>
+</div>
+
+<div class="example">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      {{ 'common.exampleUseSection' | translate }}
+      <h2 id="example3" [cplHighlight]="color" [defaultColor]="'#ff696d'" class="example2">{{'Click a Color!' | translate}}</h2>
+      <table>
+        <tr><td cplHighlight="skyblue"  (click)="color='skyblue'">&nbsp;</td><td cplHighlight="lightgreen" (click)="color='lightgreen'">&nbsp;</td><td cplHighlight="mediumvioletred" (click)="color='mediumvioletred'">&nbsp;</td></tr>
+        <tr><td cplHighlight="turquoise" (click)="color='turquoise'">&nbsp;</td><td cplHighlight="#189797" (click)="color='#189797'">&nbsp;</td><td cplHighlight="crimson" (click)="color='crimson'">&nbsp;</td></tr>
+        <tr><td cplHighlight="orange" (click)="color='orange'">&nbsp;</td><td cplHighlight="gold" (click)="color='gold'">&nbsp;</td><td cplHighlight="lightsalmon" (click)="color='lightsalmon'">&nbsp;</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active" [ngClass]="{active: isActive === 'html'}" (click)="isActive = 'html'" ><a data-target="#html" class="active">HTML</a></li>
+    </ul>
+
+    <pre id="example3" [ngClass]="{hidden: isActive !== 'html'}" class="html">
+      <code [innerHTML]="htmlContent3" highlight-js-content=".highlight" class="html">
+      </code>
+    </pre>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+
+@grid-breakpoint: "(max-width: 560px)";
+
+:host {
+  display: block;
+}
+
+.search-filter {
+  border-bottom: 1px solid #b4c0cc;
+  padding: 18px 0px 18px 0px;
+
+  input {
+    border: 1px solid #b4c0cc;
+    border-radius: 3px;
+    box-shadow: none;
+    display: inline-block;
+    font-size: 14px;
+    min-height: 30px;
+    padding: 3px 6px;
+    width: auto;
+    user-select: none;
+    vertical-align: middle;
+  }
+}
+
+
+@hostDeep: ~':host /deep/';
+
+// Must use '/deep/' to target component level templates. Caused by style scoping in the shadow DOM
+// http://stackoverflow.com/questions/38599491/primeng-element-not-scoped-cant-be-styled-with-default-angular-2-viewencapsula
+@{hostDeep} {
+  .ui-datatable {
+    border-collapse: collapse;
+
+    table {
+      border: none;
+      width: 100%;
+    }
+
+    tbody {
+      border: none;
+    }
+
+    tr {
+      border-bottom: 1px solid #b4c0cc;
+      border-left: none;
+      border-right: none;
+      height: 40px;
+    }
+
+    td {
+      background: #ffffff;
+      border: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    td.number {
+      text-align: right;
+    }
+
+    // prevents numeral columns from right-aligning when table shifts to responsive columns
+    @media (max-width: 560px) {
+      td.number {
+          text-align: left !important;
+        }
+      }
+
+    th.number{
+      text-align: right;
+    }
+
+    th {
+      background: #ffffff;
+      border: none;
+      color: black;
+      text-align: left;
+      user-select: none;
+      width: 150px;
+
+      .ui-sortable-column-icon {
+        color: #d1dee4;
+        margin: 0;
+      }
+    }
+
+    .ui-paginator {
+      background: #ffffff;
+      padding: 4px 0 0 0;
+
+      .ui-paginator-element {
+        border: none;
+      }
+
+      .ui-state-active {
+        background: none;
+        color: #0097e0;
+      }
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+  }
+}

@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h1>{{'dataTableComponentPage.title' | translate}}</h1>
+    <p>{{'dataTableComponentPage.description' | translate}}</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{'common.designDocSection' | translate}}
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{'common.apiExampleSection' | translate}}
+    <pre ngNonBindable>
+      <code class="language-html">
+        &lt;cpl-datatable [config]="config"&gt;&lt;/cpl-datatable&gt;
+      </code>
+    </pre>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    {{'common.exampleUseSection' | translate}}
+    <button (click)="exportToPdf()">{{'dataTableComponentPage.exportPdf' | translate}}</button>
+    <button (click)="exportToCsv()">{{'dataTableComponentPage.exportCsv' | translate}}</button>
+    <cpl-datatable [config]="config"></cpl-datatable>
+  </div>
+</div>
+
+
+

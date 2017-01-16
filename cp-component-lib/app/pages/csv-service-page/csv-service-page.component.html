@@ -1,0 +1,32 @@
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h1>{{'csvServicePage.title' | translate}}</h1>
+    <p>{{'csvServicePage.description' | translate}}</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{'common.designDocSection' | translate}}</h3>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{'common.apiExampleSection' | translate}}</h3>
+    <pre ngNonBindable>
+      <code class="language-typescript">
+        this.CsvExportService.downloadCsv(data: WorklistAsset[], columnDefs: CplDataTableColumnDefs[], filename: string);
+      </code>
+    </pre>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>{{'common.exampleUseSection' | translate}}</h3>
+    <p>{{'csvServicePage.testDescription' | translate}}</p>
+    <button (click)="exportToCsv()">{{'csvServicePage.exportCsv' | translate}}</button>
+  </div>
+</div>

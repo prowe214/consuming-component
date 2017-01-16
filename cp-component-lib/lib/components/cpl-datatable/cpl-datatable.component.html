@@ -1,0 +1,27 @@
+<div class="search-filter">
+    <label>Search:</label>
+    <input #gb [(ngModel)]="globalFilter" class="form-control" type="text" pInputText size="50" placeholder="Type to filter...">
+</div>
+
+<p-dataTable
+    [globalFilter]="gb"
+    [filterDelay]="1000"
+    [lazy]="config.lazyLoaded"
+    (onLazyLoad)="loadData($event)"
+    [paginator]="true"
+    [totalRecords]="config.dataResponse.totalCount"
+    resizableColumns="true"
+    [responsive]="true"
+    [rows]="config.numRows"
+    [value]="config.dataResponse.apiData"
+    (onRowDblclick)="rowDblClickedEvent($event)">
+        <p-column *ngFor="let field of config.fields"
+            [field]="field.field"
+            [header]="field.header"
+            [styleClass]="field.type"
+            sortable="true">
+                <template let-col let-record="rowData" pTemplate="body">
+                    <span [class]="">{{record[field.field]}}</span>
+                </template>
+        </p-column>
+</p-dataTable>
