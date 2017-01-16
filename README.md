@@ -2,9 +2,28 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
-## CROWNPEAK NOTE
+## Steps to consume a component
 
-be sure to `npm link` the `ng-component-library` repository locally.  Any edits created in that repository will **require restarting vscode** to refresh the `npm link` pointer.
+* Copy library over to consuming app (follow instructions in `cp-component-library`)
+* Create view component (using `ng generate`) that will host the component
+* `import` the cp-component into that view's module
+```
+import { CplDatatableComponent } from './../../../cp-component-lib/lib/components/cpl-datatable/cpl-datatable.component';
+import { CplDatatableModule } from './../../../cp-component-lib/lib/components/cpl-datatable/cpl-datatable.module';
+```
+* Add the component to the module's exports, and the module to the component's imports
+```
+exports: [
+  CplDatatableComponent
+],
+imports: [
+  CplDatatableModule
+]
+```
+* Add the component to the HTML of the view
+```
+<cpl-datatable></cpl-datatable>
+```
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
